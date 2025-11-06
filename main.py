@@ -21,7 +21,7 @@ def get_param() -> list[int] | None:
     """
 
     try:
-        msg = "[ERROR]: La IP debe de estar separada por '.', tener 4 octetos entre [0, 255]"
+        msg = "IP Invalida"
 
         if len(argv) != 2:
             raise Exception("[ERROR]: Formato incorrecto")
@@ -42,6 +42,7 @@ def get_param() -> list[int] | None:
         # ip_octetos = argv[1].split(".")
         # [int(octeto) for octeto in ip_octetos 0 <= int(octeto) <= 255 and len(ip_octetos) == 4]
 
+        print("IP Valida")
         return ip_octetos
     except Exception as error:
         print(error)
@@ -60,15 +61,15 @@ def type_of_ip(octetos: list[int]) -> str:
 
     if 1 <= octetos[0] <= 127:
         if octetos[0] == 127:
-            return "IP Clase A con loopback"
+            return "Clase: A con loopback"
         else:
-            return "IP Clase A"
+            return "Clase: A"
     elif 128 <= octetos[0] <= 191:
-        return "IP Clase B"
+        return "Clase: B"
     elif 192 <= octetos[0] <= 223:
-        return "IP Clase C"
+        return "Clase: C"
     else:
-        return "IP Clase D o E, con proposito multidifusion o experimental respectivamente"
+        return "Clase: D o E, con proposito multidifusion o experimental respectivamente"
 
 
 if "__main__" == __name__:

@@ -1,6 +1,6 @@
 # Comprobacion de IP y clases (Python) — README
 
-> CLI Que dada una IP por terminal en formato: py main.py <IP>, comprueba si es correcta y deuelve el tipo de clase (A, B, C o D)
+> CLI que dada una IP por terminal en formato: py main.py <IP>, comprueba si es correcta y deuelve el tipo de clase (A, B, C o D).
 > Devuelve un mensaje de salida del tipo de clase.
 
 ---
@@ -108,16 +108,21 @@ py main.py 235.2.32.87
 ```
 Salida esperada:
 ```
-123.56.45.3 => IP Clase A
-235.2.32.87 => IP Clase D o E, con proposito multidifusion o experimental respectivamente
+123.56.45.3 =>
+IP Valida 
+Clase A
+
+235.2.32.87 => 
+IP Valida
+Clase D o E, con proposito multidifusion o experimental respectivamente
 ```
 
 ## 6) Mensajes de error y códigos de salida
 
 - **Formato en terminal incorrecto** ->
-- Mensaje: `[ERROR]: Formato incorrecto` →
+- Mensaje: `IP Invalida` (formato especificado en la practica) →
 - **Tipo de dato**, **rango numerico**, **numero de octetos** ->
-- Mensaje Generico: `[ERROR]: La IP debe de estar separada por '.', tener 4 octetos entre [0, 255]`
+- Mensaje: `IP Invalida` (formato especificado en la practica)
 
 ---
 
