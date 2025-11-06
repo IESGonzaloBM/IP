@@ -17,7 +17,7 @@ Este proyecto implementa una comprobacion de IP y clase.
 
 - **Python 3.10 o superior**.
 - **Sin dependencias externas obligatorias.**
-- Si en algún momento se añaden librerías, se listarán en el archivo **`dependecias.txt`** (ver sección 5).
+- Si en algún momento se añaden librerías, se listarán en el archivo **`dependecias.txt`**
 
 ---
 
@@ -98,7 +98,6 @@ python main.py <IP>
 
 ### Ejemplos
 
-**Suma explícita**
 ```bash
 # Linux/macOS
 python main.py 123.56.45.3
@@ -114,7 +113,7 @@ Clase A
 
 235.2.32.87 => 
 IP Valida
-Clase D o E, con proposito multidifusion o experimental respectivamente
+Clase D
 ```
 
 ## 6) Mensajes de error y códigos de salida

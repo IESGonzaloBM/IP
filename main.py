@@ -49,7 +49,7 @@ def get_param() -> list[int] | None:
         exit(1)
 
 
-def type_of_ip(octetos: list[int]) -> str:
+def type_of_ip(octetos: list[int]) -> str | None:
     """
     Comprueba dado el parametro que clase de IP es.
 
@@ -68,8 +68,11 @@ def type_of_ip(octetos: list[int]) -> str:
         return "Clase: B"
     elif 192 <= octetos[0] <= 223:
         return "Clase: C"
-    else:
-        return "Clase: D o E, con proposito multidifusion o experimental respectivamente"
+    elif 224 <= octetos[0] <= 239:
+        return "Clase: D"
+    elif 240 <= octetos[0] <= 254:
+        return "Clase: E"
+    return None
 
 
 if "__main__" == __name__:
