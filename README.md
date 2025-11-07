@@ -96,7 +96,7 @@ python main.py <IP>
 > En Windows puedes usar `py` en lugar de `python`.
 > En Linux, si conviven varias versiones, usa `python3`.
 
-### Ejemplos
+### Casos de prueba
 
 ```bash
 # Linux/macOS
@@ -114,10 +114,16 @@ Clase A
 235.2.32.87 => 
 IP Valida
 Clase D
+
+0.0.0.0 =>
+IP Valida
+Direccion especial
 ```
 
 ## 6) Mensajes de error y códigos de salida
 
+He puesto  todos los mensajes de error como `IP Invalida` porque es como lo ponia en el ejemplo de la tarea, sin embargo,
+en el codigo se puede apreciar como se evalua cada posibilidad de error por separado en la funcion `get_param()`
 - **Formato en terminal incorrecto** ->
 - Mensaje: `IP Invalida` (formato especificado en la practica) →
 - **Tipo de dato**, **rango numerico**, **numero de octetos** ->
