@@ -88,7 +88,7 @@ py -m venv .venv
 
 ### Sintaxis general
 ```bash
-python main.py <IP>
+python comprueba_ip.py <IPv4>
 ```
 - `main.py` archivo `.py` donde esta el codigo
 - `IP` dirección en formato Ipv4
@@ -96,14 +96,14 @@ python main.py <IP>
 > En Windows puedes usar `py` en lugar de `python`.
 > En Linux, si conviven varias versiones, usa `python3`.
 
-### Ejemplos
+### Casos de prueba
 
 ```bash
 # Linux/macOS
-python main.py 123.56.45.3
+python comprueba_ip.py 123.56.45.3
 
 # Windows
-py main.py 235.2.32.87
+py comprueba_ip.py 235.2.32.87
 ```
 Salida esperada:
 ```
@@ -114,10 +114,16 @@ Clase A
 235.2.32.87 => 
 IP Valida
 Clase D
+
+0.0.0.0 =>
+IP Valida
+Direccion especial
 ```
 
 ## 6) Mensajes de error y códigos de salida
 
+He puesto  todos los mensajes de error como `IP Invalida` porque es como lo ponia en el ejemplo de la tarea, sin embargo,
+en el codigo se puede apreciar como se evalua cada posibilidad de error por separado en la funcion `get_param()`
 - **Formato en terminal incorrecto** ->
 - Mensaje: `IP Invalida` (formato especificado en la practica) →
 - **Tipo de dato**, **rango numerico**, **numero de octetos** ->
